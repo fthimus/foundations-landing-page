@@ -1,14 +1,95 @@
+body, nav, nav>ul, header,
+main, 
+.random-info, .info-container,
+.info-container>article, .quote,
+.call-to-action,
+footer {
+    display: flex;
+}
+
+nav {
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
 img {
     object-fit: cover;
     object-position: center;
 }
 
-header>section>img {
-    width: 300px;
-    height: 200px;
+header {
+    height: 150px;
 }
 
-.random-info>article>img {
-    width: 200px;
-    height: 200px;
+header>img {
+    width: 400px;
+}
+
+.random-info, body,
+main, 
+.info-container>article, .quote {
+    flex-direction: column;
+}
+
+body {
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0;
+    padding: 8px 15vw;
+    gap: 30px;
+}
+
+main {
+    flex: 1;
+    justify-content: space-between;
+}
+
+.random-info, .info-container,
+.quote, .call-to-action,
+footer {
+    justify-content: center;
+    align-items: center;
+}
+
+.info-container {
+    gap: 30px;
+}
+
+.info-container>article {
+    width: 150px;
+}
+
+.info-container>article>img {
+    height: 100px;
+    width: auto;
+}
+
+.quote {
+    padding: 10px 150px
+}
+
+.quote>p:nth-of-type(2) {
+    align-self: flex-end;
+}
+
+.call-to-action {
+    justify-content: space-between;
+    padding: 0px 150px
+}
+
+.call-to-action h3, .call-to-action p {
+    margin: 5px 0px;
 }
