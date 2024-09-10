@@ -1,3 +1,9 @@
+body {
+    height: 1700px;
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 body, nav, nav>ul, header,
 main, 
 .random-info, .info-container,
@@ -8,15 +14,50 @@ ul {
     display: flex;
 }
 
-nav, header, footer,
-.quote, .random-info {
-    padding: 10px 15vw;
-}
-
-.random-info, body,
+body,
+.random-info,
 main, 
 .info-container>article, .quote {
     flex-direction: column;
+}
+
+.random-info, .info-container,
+.info-container *,
+.quote, .call-to-action,
+footer {
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    gap: 80px;
+    height: 300px;
+    justify-content: space-between;
+}
+
+main {
+    flex: 1;
+    justify-content: space-between;
+}
+
+main>* {
+    flex-shrink: 0;
+}
+
+.call-to-action {
+    justify-content: space-between;
+    margin: 10px 15vw;
+    padding: 40px 60px;
+}
+
+nav, header, footer,
+.quote, .random-info {
+    padding: 10px 15vw;
 }
 
 nav, header, footer {
@@ -30,24 +71,6 @@ nav>h3, header>article>h1, .call-to-action h3{
 
 .random-info>h3, .quote * {
     color: #1f2937;
-}
-
-.random-info, .info-container,
-.info-container *,
-.quote, .call-to-action,
-footer {
-    justify-content: center;
-    align-items: center;
-}
-
-body {
-    height: 100vh;
-    margin: 0;
-}
-
-nav {
-    justify-content: space-between;
-    align-items: center;
 }
 
 ul {
@@ -72,12 +95,6 @@ img {
     object-position: center;
 }
 
-header {
-    gap: 80px;
-    height: 300px;
-    justify-content: space-between;
-}
-
 header>img {
     width: 400px;
     flex-shrink: 0;
@@ -92,13 +109,8 @@ header>article>p {
     font-size: 18px;
 }
 
-main {
-    flex: 1;
-    justify-content: space-between;
-}
-
 .random-info, .quote {
-    height: 25vh;
+    height: 400px;
 }
 
 .random-info>h3 {
@@ -112,7 +124,9 @@ main {
 
 .info-container>article>img {
     width: 200px;
-    height: 150px;;
+    height: 150px;
+    border: 5px solid #3882f6;
+    border-radius: 10px;
 }
 
 .quote {
@@ -138,12 +152,6 @@ main {
 header>article>button {
     background-color: #3882f6;
     border-radius: 10px;
-}
-
-.call-to-action {
-    justify-content: space-between;
-    margin: 10px 15vw;
-    padding: 40px 60px;
 }
 
 .call-to-action h3, .call-to-action p {
